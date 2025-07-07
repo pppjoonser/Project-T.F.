@@ -1,0 +1,10 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
+    <Style src="project://database/Assets/0-Works/Bakbak/100.library/BakbakLib/LogManager/Editor/LogManager.uss?fileID=7433441132597879392&amp;guid=e3df395236c381e459d7459c7d50a9ce&amp;type=3#LogManager" />
+    <ui:VisualElement name="Container" style="flex-grow: 1;">
+        <ui:Label text="LogManager" style="height: 37px; font-size: 22px; -unity-font-style: bold; -unity-text-align: upper-left; color: rgb(213, 213, 213);" />
+        <Bakbak.Editor.SplitView>
+            <ui:VisualElement name="LeftPannel" style="flex-grow: 1;" />
+            <ui:VisualElement name="RightPannel" style="flex-grow: 1;" />
+        </Bakbak.Editor.SplitView>
+    </ui:VisualElement>
+</ui:UXML>

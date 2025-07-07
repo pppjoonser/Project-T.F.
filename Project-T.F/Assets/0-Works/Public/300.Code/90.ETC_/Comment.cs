@@ -1,6 +1,6 @@
 #if UNITY_EDITOR
 using UnityEngine;
-
+#pragma warning disable CS0414
 [DisallowMultipleComponent]
 public class Comment : MonoBehaviour
 {
