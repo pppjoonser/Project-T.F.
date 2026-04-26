@@ -6,7 +6,7 @@ public class Comment : MonoBehaviour
 {
     [SerializeField]
     [TextArea(3, 30)]
-    [Tooltip("순수 주석용 스크립트")]
+    [Tooltip("add your comment")]
     private string note = "type here";
 }
 #endif

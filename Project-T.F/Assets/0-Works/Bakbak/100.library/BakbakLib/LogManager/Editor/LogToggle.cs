@@ -8,7 +8,7 @@ using UnityEngine.UIElements;
 
 namespace Bakbak.Editor
 {
-    public class LogPannel : EditorWindow
+    public class LogToggle : EditorWindow
     {
         [SerializeField] private VisualTreeAsset visualTreeAsset = default;
     }

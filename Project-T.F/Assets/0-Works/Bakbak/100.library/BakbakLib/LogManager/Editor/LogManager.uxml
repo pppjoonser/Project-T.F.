@@ -4,7 +4,12 @@
         <ui:Label text="LogManager" style="height: 37px; font-size: 22px; -unity-font-style: bold; -unity-text-align: upper-left; color: rgb(213, 213, 213);" />
         <Bakbak.Editor.SplitView>
             <ui:VisualElement name="LeftPannel" style="flex-grow: 1;" />
-            <ui:VisualElement name="RightPannel" style="flex-grow: 1;" />
+            <ui:VisualElement name="RightPannel" style="flex-grow: 1;">
+                <Bakbak.Editor.SplitView orientation="Vertical">
+                    <ui:VisualElement name="Upper" style="flex-grow: 1; flex-basis: auto;" />
+                    <ui:VisualElement name="Discription" style="flex-grow: 0; flex-shrink: 1;" />
+                </Bakbak.Editor.SplitView>
+            </ui:VisualElement>
         </Bakbak.Editor.SplitView>
     </ui:VisualElement>
 </ui:UXML>
