@@ -1,15 +1,58 @@
-<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <Style src="project://database/Assets/0-Works/Bakbak/100.library/BakbakLib/LogManager/Editor/LogManager.uss?fileID=7433441132597879392&amp;guid=e3df395236c381e459d7459c7d50a9ce&amp;type=3#LogManager" />
-    <ui:VisualElement name="Container" style="flex-grow: 1;">
-        <ui:Label text="LogManager" style="height: 37px; font-size: 22px; -unity-font-style: bold; -unity-text-align: upper-left; color: rgb(213, 213, 213);" />
-        <Bakbak.Editor.SplitView>
-            <ui:VisualElement name="LeftPannel" style="flex-grow: 1;" />
-            <ui:VisualElement name="RightPannel" style="flex-grow: 1;">
-                <Bakbak.Editor.SplitView orientation="Vertical">
-                    <ui:VisualElement name="Upper" style="flex-grow: 1; flex-basis: auto;" />
-                    <ui:VisualElement name="Discription" style="flex-grow: 0; flex-shrink: 1;" />
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="Root" class="log-viewer">
+        <ui:VisualElement name="Header" class="viewer-header">
+            <ui:Label text="LogViewer" />
+            <ui:VisualElement name="CompactTabs" class="compact-tabs">
+                <ui:Button name="CompactLogsTab" text="Logs" class="compact-tab selected" />
+                <ui:Button name="CompactTagsTab" text="Tags" class="compact-tab" />
+            </ui:VisualElement>
+            <ui:VisualElement name="CompactSearchHost" class="compact-search-host" />
+            <ui:VisualElement name="HeaderActions" class="header-actions">
+                <ui:Toggle name="CollapseToggle" text="Collapse" class="collapse-toggle" tooltip="Merge identical logs" />
+                <ui:Button name="ClearButton" class="clear-button" tooltip="Clear logs" />
+                <ui:Button name="RefreshButton" class="refresh-button" tooltip="Refresh logs" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <Bakbak.Editor.SplitView name="OuterSplit" class="main-split" fixed-pane-index="0" fixed-pane-initial-dimension="180" orientation="Horizontal">
+            <ui:VisualElement name="DesktopTagsSlot" class="desktop-pane-slot">
+                <ui:VisualElement name="TagsPane" class="pane tags-pane">
+                    <ui:Label text="Tags" class="pane-title" />
+                    <ui:VisualElement name="TagSearchRow" class="search-row">
+                        <ui:TextField name="TagSearchField" class="search-field" tooltip="Search tag name" />
+                        <ui:Image name="TagSearchIcon" class="search-icon" />
+                        <ui:Button name="TagClearButton" text="x" class="search-clear-button" tooltip="Clear search" />
+                    </ui:VisualElement>
+                    <ui:ScrollView name="TagView" class="pane-scroll" />
+                </ui:VisualElement>
+            </ui:VisualElement>
+            <Bakbak.Editor.SplitView name="RightSplit" class="right-split" fixed-pane-index="1" fixed-pane-initial-dimension="260" orientation="Horizontal">
+                <ui:VisualElement name="DesktopLogsSlot" class="desktop-pane-slot">
+                    <ui:VisualElement name="LogsPane" class="pane logs-pane">
+                        <ui:Label text="Logs" class="pane-title" />
+                        <ui:VisualElement name="LogSearchRow" class="search-row">
+                            <ui:TextField name="LogSearchField" class="search-field" tooltip="Search log title / message" />
+                            <ui:Image name="LogSearchIcon" class="search-icon" />
+                            <ui:Button name="LogClearButton" text="x" class="search-clear-button" tooltip="Clear search" />
+                        </ui:VisualElement>
+                        <ui:ListView name="LogView" class="pane-scroll log-list" />
+                        <ui:Label name="EmptyLogsLabel" text="No logs" class="empty-label" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="DesktopDetailSlot" class="desktop-pane-slot">
+                    <ui:VisualElement name="DetailPane" class="pane detail-pane">
+                        <ui:Label text="Detail" class="pane-title" />
+                        <ui:ScrollView name="DetailHost" class="detail-host" />
+                    </ui:VisualElement>
+                </ui:VisualElement>
+            </Bakbak.Editor.SplitView>
+        </Bakbak.Editor.SplitView>
+        <ui:VisualElement name="CompactLayout" class="compact-layout">
+            <ui:VisualElement name="CompactPaneHost" class="compact-pane-host">
+                <Bakbak.Editor.SplitView name="CompactLogDetailSplit" class="compact-log-detail-split" fixed-pane-index="1" fixed-pane-initial-dimension="120" orientation="Vertical">
+                    <ui:VisualElement name="CompactLogsSlot" class="compact-split-slot" />
+                    <ui:VisualElement name="CompactDetailSlot" class="compact-split-slot" />
                 </Bakbak.Editor.SplitView>
             </ui:VisualElement>
-        </Bakbak.Editor.SplitView>
+        </ui:VisualElement>
     </ui:VisualElement>
 </ui:UXML>

@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="True">
+    <ui:VisualElement class="log-detail-pannel">
+        <ui:Label name="DetailTitle" text="Select a log" class="detail-title" />
+        <ui:Label name="DetailMeta" class="detail-meta" />
+        <ui:Label name="DetailTags" class="detail-tags" />
+        <ui:VisualElement class="detail-section detail-message">
+            <ui:Label text="Message" class="detail-section-title" />
+            <ui:TextField name="DetailMessage" multiline="true" class="detail-section-value" />
+        </ui:VisualElement>
+        <ui:VisualElement class="detail-section detail-stack">
+            <ui:Label text="Stack Trace" class="detail-section-title" />
+            <ui:TextField name="DetailStackTrace" multiline="true" class="detail-section-value" />
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

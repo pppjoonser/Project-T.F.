@@ -1,6 +1,6 @@
-<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <Style src="project://database/Assets/0-Works/Bakbak/100.library/BakbakLib/Editor/LogToggle.uss?fileID=7433441132597879392&amp;guid=22973424d346d4d4799b94ef4b08c799&amp;type=3#LogToggle" />
-    <ui:VisualElement name="logToggle" style="flex-grow: 1;">
-        <ui:Button text="Button" style="flex-shrink: 1; align-self: stretch; align-content: flex-start; -unity-text-align: middle-left;" />
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="TagRow" class="tag-toggle">
+        <ui:Label name="TagName" class="tag-toggle-label" />
+        <ui:Toggle name="TagToggle" class="tag-toggle-check" />
     </ui:VisualElement>
 </ui:UXML>

@@ -1,7 +1,11 @@
-<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../../../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="True">
-    <Style src="project://database/Assets/0-Works/Bakbak/100.library/BakbakLib/LogManager/Editor/LogPannel.uss?fileID=7433441132597879392&amp;guid=9339b1c4d713e6145b1ab786358e3d6f&amp;type=3#LogPannel" />
-    <ui:VisualElement name="Log" style="margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0; padding-top: 5px; padding-right: 5px; padding-bottom: 5px; padding-left: 5px; flex-direction: row; border-left-color: rgb(192, 192, 192); border-right-color: rgb(192, 192, 192); border-top-color: rgb(192, 192, 192); border-bottom-color: rgb(192, 192, 192); border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px;">
-        <ui:IMGUIContainer style="background-image: url(&quot;project://database/Packages/com.unity.render-pipelines.core/Editor/Lighting/Icons/Advanced_Pressed_mini.png?fileID=2800000&amp;guid=c1d870384c7ed3c49b30d01278bf3949&amp;type=3#Advanced_Pressed_mini&quot;); height: 32px; width: 32px;" />
-        <ui:Label text="Label" style="-unity-text-align: upper-left; padding-top: 2px; padding-bottom: 2px; align-self: stretch; align-content: auto; justify-content: space-evenly; align-items: auto; flex-grow: 1;" />
+<ui:UXML xmlns:ui="UnityEngine.UIElements" editor-extension-mode="True">
+    <ui:VisualElement name="LogRow" class="log-row">
+        <ui:VisualElement name="LogIcon" class="log-row-icon" />
+        <ui:VisualElement name="LogContent" class="log-row-content">
+            <ui:Label name="LogTitle" class="log-row-title" />
+            <ui:Label name="LogMessage" class="log-row-message" />
+        </ui:VisualElement>
+        <ui:Label name="LogTime" class="log-row-time" />
+        <ui:Label name="LogCount" class="log-row-count" />
     </ui:VisualElement>
 </ui:UXML>

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public struct LogInfo
 {
-    public List<string> logTypes;
+    public string[] logTypes;
     public string message;
 
     // 추가 필드
@@ -17,7 +17,7 @@ public struct LogInfo
     public Exception exception;       // 예외 객체(있을 경우)
 
     public LogInfo(
-        List<string> logType,
+        string[] logType,
         string message,
         string stackTrace = null,
         UnityEngine.Object context = null,
